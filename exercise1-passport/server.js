@@ -44,7 +44,7 @@ app.get('/login', checkNotAuthenticate, (req, res) => {
 app.post('/login', checkNotAuthenticate, passport.authenticate('local', { successRedirect: '/', failureRedirect: '/login', failureFlash: true }), (req, res) => {
     
 })
-
+    
 app.get('/register', checkNotAuthenticate, (req, res) => {
     res.render('register.ejs')
 })
