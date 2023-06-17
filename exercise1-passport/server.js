@@ -69,9 +69,7 @@ app.post('/register', checkNotAuthenticate, async (req, res) => {
 app.delete('/logout', function(req, res, next) {
   req.logout(function(err) {
     if (err) { return next(err); }
-    res.redirect('/login');
-  });
-});
+    res.redirect('/login');findOne
 
 function checkAuthenticate(req, res, next) {
     if(req.isAuthenticated()) {
@@ -82,7 +80,9 @@ function checkAuthenticate(req, res, next) {
 }
 
 function checkNotAuthenticate(req, res, next) {
+    console.log(req.isAuthenticated());
     if(req.isAuthenticated()) {
+        console.log('hoiiii');
        return res.redirect('/')
     }
     next()

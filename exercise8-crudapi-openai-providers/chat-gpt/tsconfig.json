@@ -16,6 +16,14 @@
     "noImplicitAny": false,
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
-    "noFallthroughCasesInSwitch": false
+    "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "@arezooq/nest-chatgpt": [
+        "libs/nest-chatgpt-learning/src"
+      ],
+      "@arezooq/nest-chatgpt/*": [
+        "libs/nest-chatgpt-learning/src/*"
+      ]
+    }
   }
 }
