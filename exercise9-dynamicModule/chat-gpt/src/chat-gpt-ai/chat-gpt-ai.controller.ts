@@ -6,13 +6,13 @@ import {
   UsePipes,
   ValidationPipe,
 } from '@nestjs/common';
-import { ChatGptAiService } from './chat-gpt-ai.service';
+import { NestChatgptService } from '@arezooq/nest-chatgpt';
 import { GetAiModelAnswer } from './model/get-ai-model-answer';
 import { SetSelectedModel } from './model/set-selected-model';
 
 @Controller('chat-gpt-ai')
 export class ChatGptAiController {
-  constructor(private readonly chatService: ChatGptAiService) {}
+  constructor(private readonly chatService: NestChatgptService) {}
 
   @Post('/message')
   @UsePipes(ValidationPipe)
